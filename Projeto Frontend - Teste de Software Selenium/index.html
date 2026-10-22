@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LabQA | Cadastro de Participantes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="container top-inner"><div class="brand">◈ <b>LabQA</b><span>Ambiente de testes de software</span></div><span class="tag">LABORATÓRIO WEB · v1.0</span></div></header>
+<main class="container">
+ <section class="hero"><span class="eyebrow">TESTE FUNCIONAL • SELENIUM + PYTHON</span><h1>Cadastro de participantes</h1><p>Aplicação demonstrativa para exercitar validação, automação de interface, busca e exclusão. Dados mantidos somente neste navegador.</p></section>
+ <section class="layout"><article class="card"><div class="card-head"><div><h2>Novo participante</h2><p>Preencha os dados abaixo para criar um registro.</p></div><span class="step">01 / 02</span></div>
+ <form id="form-cadastro" novalidate>
+  <div class="two"><div class="field"><label for="nome">Nome completo <em>*</em></label><input id="nome" name="nome" type="text" autocomplete="name" placeholder="Ex.: Ana Oliveira"><small class="error" id="erro-nome" aria-live="polite"></small></div><div class="field"><label for="email">E-mail <em>*</em></label><input id="email" name="email" type="email" autocomplete="email" placeholder="ana@exemplo.com"><small class="error" id="erro-email" aria-live="polite"></small></div></div>
+  <div class="two"><div class="field"><label for="telefone">Telefone</label><input id="telefone" name="telefone" type="tel" placeholder="(92) 99999-9999"><small class="error" id="erro-telefone" aria-live="polite"></small></div><div class="field"><label for="curso">Curso <em>*</em></label><select id="curso" name="curso"><option value="">Selecione um curso</option><option value="Teste de Software">Teste de Software</option><option value="Desenvolvimento Web">Desenvolvimento Web</option><option value="Banco de Dados">Banco de Dados</option></select><small class="error" id="erro-curso" aria-live="polite"></small></div></div>
+  <div class="two"><div class="field"><label for="senha">Senha <em>*</em></label><input id="senha" name="senha" type="password" placeholder="Mínimo de 8 caracteres"><small class="error" id="erro-senha" aria-live="polite"></small></div><div class="field"><label for="confirmar-senha">Confirmar senha <em>*</em></label><input id="confirmar-senha" name="confirmar-senha" type="password" placeholder="Repita a senha"><small class="error" id="erro-confirmar-senha" aria-live="polite"></small></div></div>
+  <label class="check"><input id="termos" type="checkbox"><span>Li e aceito os termos de uso deste laboratório de demonstração. <em>*</em></span></label><small class="error" id="erro-termos" aria-live="polite"></small>
+  <div id="mensagem" class="message" role="status" aria-live="polite"></div>
+  <div class="actions"><button type="reset" id="btn-limpar" class="btn secondary">Limpar formulário</button><button type="submit" id="btn-cadastrar" class="btn primary">Cadastrar participante <span>→</span></button></div>
+ </form></article>
+ <aside class="card sidebar"><div class="card-head"><div><h2>Registros cadastrados</h2><p>Consulte e gerencie cadastros locais.</p></div><span class="step">02 / 02</span></div><div class="counter"><strong id="total-registros">0</strong><span>participantes cadastrados</span></div><label for="busca" class="search-label">Buscar pelo nome ou e-mail</label><input id="busca" type="search" placeholder="Digite para filtrar..."><div id="lista-registros" class="list" aria-live="polite"><p class="empty">Nenhum participante cadastrado.</p></div><p class="note">🔒 As senhas nunca são exibidas nem armazenadas. Os dados de cadastro são armazenados no localStorage somente para fins didáticos.</p></aside></section>
+</main><footer class="container footer">LabQA · Projeto didático de automação web com Selenium</footer><script src="app.js"></script>
+</body></html>
